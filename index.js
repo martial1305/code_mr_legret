@@ -33,16 +33,16 @@ function addLine(article, idx){
                 <div class="textarea designation" contenteditable>${article.designation}</div>
             </td>
             <td>
-                <div class="textarea montant" contenteditable>${article.montant}</div>
+                <div class="textarea montant" contenteditable>${article.montant || 0}</div>
             </td>
             <td>
-                <div class="textarea tva" contenteditable>${article.tva}</div>
+                <div class="textarea tva" contenteditable>${article.tva || 0}</div>
             </td>
             <td>
-                <div class="mtva">${article.montantTVA}</div>
+                <div class="mtva">${article.montantTVA || 0}</div>
             </td>
             <td>
-                <div class="mttc">${article.montantTTC}</div>
+                <div class="mttc">${article.montantTTC || 0}</div>
             </td>
             <td>
                 <button type="button" class="delete btn btn-secondary">
@@ -139,3 +139,5 @@ $('.add-line').on('click', () => {
     addLine(article);
 
 });
+
+$('.add-line').trigger('click');
