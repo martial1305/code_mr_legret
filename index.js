@@ -130,10 +130,10 @@ $('.add-line').on('click', () => {
     let article = {
         id: CreateGuid(),
         designation: "",
-        montant: "",
-        tva: "",
-        montantTVA:"",
-        montantTTC: ""
+        montant: "0",
+        tva: "0",
+        montantTVA:"0",
+        montantTTC: "0"
     }
     articles.push(article);
     addLine(article);
